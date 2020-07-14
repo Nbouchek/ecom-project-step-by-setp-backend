@@ -1,4 +1,4 @@
-package com.nacerbits.ecommerce.entitiy;
+package com.nacerbits.ecommerce.entity;
 
 import lombok.Getter;
 import lombok.Setter;

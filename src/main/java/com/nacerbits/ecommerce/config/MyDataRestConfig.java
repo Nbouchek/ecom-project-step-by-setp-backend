@@ -1,7 +1,7 @@
 package com.nacerbits.ecommerce.config;
 
-import com.nacerbits.ecommerce.entitiy.Product;
-import com.nacerbits.ecommerce.entitiy.ProductCategory;
+import com.nacerbits.ecommerce.entity.Product;
+import com.nacerbits.ecommerce.entity.ProductCategory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.rest.core.config.RepositoryRestConfiguration;

@@ -1,4 +1,4 @@
-package com.nacerbits.ecommerce.entitiy;
+package com.nacerbits.ecommerce.entity;
 
 import lombok.Data;
 import org.hibernate.annotations.CreationTimestamp;
