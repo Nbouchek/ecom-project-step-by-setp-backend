@@ -1,16 +1,13 @@
 package com.nacerbits.ecommerce.entity;
 
-import lombok.Getter;
-import lombok.Setter;
+import lombok.Data;
 
 import javax.persistence.*;
 import java.util.Set;
 
 @Entity
 @Table(name = "product_category")
-// @Data -- known bug in Lombok
-@Getter
-@Setter
+@Data
 public class ProductCategory {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
