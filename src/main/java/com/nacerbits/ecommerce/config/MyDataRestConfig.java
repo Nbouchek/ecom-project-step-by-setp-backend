@@ -1,7 +1,9 @@
 package com.nacerbits.ecommerce.config;
 
+import com.nacerbits.ecommerce.entity.Country;
 import com.nacerbits.ecommerce.entity.Product;
 import com.nacerbits.ecommerce.entity.ProductCategory;
+import com.nacerbits.ecommerce.entity.State;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.rest.core.config.RepositoryRestConfiguration;
@@ -30,6 +32,9 @@ public class MyDataRestConfig implements RepositoryRestConfigurer {
         // disable HTTP methods for Product and ProductCategory: PUT, POST, and DELETE
         disableHttpMethods(config, Product.class, theUnsupportedActions);
         disableHttpMethods(config, ProductCategory.class, theUnsupportedActions);
+
+        disableHttpMethods(config, Country.class, theUnsupportedActions);
+        disableHttpMethods(config, State.class, theUnsupportedActions);
     }
 
     private void disableHttpMethods(RepositoryRestConfiguration config, Class<?> theType, HttpMethod[] theUnsupportedActions) {
