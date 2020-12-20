@@ -28,4 +28,11 @@ public class OrderItem {
 
     @Column(name = "image_url")
     private String imageUrl;
+
+    @ManyToOne
+    @JoinColumn(name = "order_id")
+    private Order order;
+
+    public void setOrder(Order order) {
+    }
 }
