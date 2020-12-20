@@ -1,6 +1,8 @@
 package com.nacerbits.ecommerce.entity;
 
 import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
@@ -12,7 +14,8 @@ import java.util.Set;
 
 @Entity
 @Table(name = "orders")
-@Data
+@Setter
+@Getter
 public class Order {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -27,15 +30,6 @@ public class Order {
 
     @Column(name = "total_quantity")
     private int totalQuantity;
-
-    @Column(name = "billing_address_id")
-    private Long billingAddressId;
-
-    @Column(name = "customer_id")
-    private Long customerId;
-
-    @Column(name = "shipping_address_id")
-    private Long shippingAddressId;
 
     @Column(name = "status")
     private String status;
