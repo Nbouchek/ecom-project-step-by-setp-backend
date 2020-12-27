@@ -18,7 +18,6 @@ public class CheckoutServiceImpl implements CheckoutService {
 
     private CustomerRepository customerRepository;
 
-    @Autowired
     public CheckoutServiceImpl(CustomerRepository customerRepository) {
         this.customerRepository = customerRepository;
     }
@@ -33,7 +32,7 @@ public class CheckoutServiceImpl implements CheckoutService {
         String orderTrackingNumber = generateOrderTrackingNumber();
         order.setOrderTrackingNumber(orderTrackingNumber);
 
-        // populate order wit orderItem
+        // populate order with orderItem
         Set<OrderItem> orderItems = purchase.getOrderItems();
         orderItems.forEach(order::add);
 
